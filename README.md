@@ -9,16 +9,36 @@ ______________________________________________________________________
 
 <!--TOC-->
 
-- [1. Installation](#1-installation)
-- [2. CLI Usage](#2-cli-usage)
-- [3. Pre-commit Hook](#3-pre-commit-hook)
-- [4. Tests](#4-tests)
+- [1. Why add numbering to markdown headings?](#1-why-add-numbering-to-markdown-headings)
+- [2. Installation](#2-installation)
+- [3. Usage](#3-usage)
+  - [3.1. As a command-line tool](#31-as-a-command-line-tool)
+  - [3.2. As a pre-commit hook](#32-as-a-pre-commit-hook)
+- [4. Compatibility with other formatters](#4-compatibility-with-other-formatters)
+  - [4.1. With markdown-toc-creator](#41-with-markdown-toc-creator)
+  - [4.2. With mdformat](#42-with-mdformat)
 
 <!--TOC-->
 
 ______________________________________________________________________
 
-## 1. Installation
+## 1. Why add numbering to markdown headings?
+
+Here are some benefits of numbering markdown headings:
+
+1. Improve readability
+   - Numbering naturally indicate hierarchy: "3.1.6" is the child of "3.1"
+   - Without numbering, we'd rely on font style & size to tell hierarchy, which
+     is not reliable
+2. Reduce communication overhead in a team setting
+   - You can reference the section by "Section 2.3.5" instead of "the section
+     named 'Monthly Sales Trend and What That Means for Our Business in the
+     Long Run'"
+3. Make diffs clearer
+   - Renumbered headings reveal structural edits instead of hiding content
+     changes in walls of text
+
+## 2. Installation
 
 ```bash
 pip install .
@@ -30,7 +50,9 @@ For development:
 pip install -e .[dev]
 ```
 
-## 2. CLI Usage
+## 3. Usage
+
+### 3.1. As a command-line tool
 
 ```bash
 markdown-heading-numbering \
@@ -51,7 +73,7 @@ Options:
 Any existing numbering is removed before the formatter applies the new
 sequence.
 
-## 3. Pre-commit Hook
+### 3.2. As a pre-commit hook
 
 This repository ships a `.pre-commit-hooks.yaml` that points to the CLI. Add
 the hook to your `.pre-commit-config.yaml`:
@@ -66,8 +88,16 @@ the hook to your `.pre-commit-config.yaml`:
 
 The hook shares the same options as the CLI and formats files in place.
 
-## 4. Tests
+## 4. Compatibility with other formatters
 
-```bash
-pytest
-```
+### 4.1. With [markdown-toc-creator](https://github.com/jsh9/markdown-toc-creator)
+
+If you are also using
+[markdown-toc-creator](https://github.com/jsh9/markdown-toc-creator) as a
+pre-commit hook to for create tables of contents in your markdown files, put
+that hook **after** this one.
+
+### 4.2. With [mdformat](https://github.com/hukkin/mdformat)
+
+This tool is fully compatible with
+[mdformat](https://github.com/hukkin/mdformat) as pre-commit hooks.

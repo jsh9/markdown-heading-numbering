@@ -54,13 +54,23 @@ repos:
           - --indent=4
           - --no-sort-keys
           - --no-eof-newline
-  - repo: https://github.com/jsh9/markdown-toc-creator
-    rev: 0.0.11
-    hooks:
-      - id: markdown-toc-creator
   - repo: https://github.com/jsh9/format-docstring
     rev: 0.2.0
     hooks:
       - id: format-docstring
         name: Format docstrings in .py files
         args: [--line-length=79]
+  - repo: local
+    hooks:
+      - id: markdown-heading-numbering
+        name: Format self (markdown numbering)
+        entry: python
+        args: [-m, markdown_heading_numbering.main]
+        language: python
+        types: [markdown]
+        exclude: ^CHANGELOG\.md$|^tests/test_data
+        additional_dependencies: [click>=8.0]
+  - repo: https://github.com/jsh9/markdown-toc-creator
+    rev: 0.0.11
+    hooks:
+      - id: markdown-toc-creator
