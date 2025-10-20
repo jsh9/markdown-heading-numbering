@@ -1,0 +1,8 @@
+---
+- id: markdown-heading-numbering
+  name: markdown heading numbering
+  description: Add hierarchical numbering to Markdown headings.
+  entry: markdown-heading-numbering
+  language: python
+  language_version: python3
+  types: [markdown]
