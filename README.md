@@ -78,7 +78,10 @@ the hook to your `.pre-commit-config.yaml`:
   rev: <commit-or-tag>
   hooks:
     - id: markdown-heading-numbering
-      args: ["--start-from-level", "2", "--end-at-level", "4"]
+      args:
+        - --start-from-level=2
+        - --end-at-level=4
+        - --initial-numbering=1
 ```
 
 The hook shares the same options as the CLI and formats files in place.
