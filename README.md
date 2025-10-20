@@ -10,13 +10,12 @@ ______________________________________________________________________
 <!--TOC-->
 
 - [1. Why add numbering to markdown headings?](#1-why-add-numbering-to-markdown-headings)
-- [2. Installation](#2-installation)
-- [3. Usage](#3-usage)
-  - [3.1. As a command-line tool](#31-as-a-command-line-tool)
-  - [3.2. As a pre-commit hook](#32-as-a-pre-commit-hook)
-- [4. Compatibility with other formatters](#4-compatibility-with-other-formatters)
-  - [4.1. With markdown-toc-creator](#41-with-markdown-toc-creator)
-  - [4.2. With mdformat](#42-with-mdformat)
+- [2. How to use this tool?](#2-how-to-use-this-tool)
+  - [2.1. As a command-line tool](#21-as-a-command-line-tool)
+  - [2.2. As a pre-commit hook](#22-as-a-pre-commit-hook)
+- [3. Compatibility with other formatters](#3-compatibility-with-other-formatters)
+  - [3.1. With markdown-toc-creator](#31-with-markdown-toc-creator)
+  - [3.2. With mdformat](#32-with-mdformat)
 
 <!--TOC-->
 
@@ -38,21 +37,17 @@ Here are some benefits of numbering markdown headings:
    - Renumbered headings reveal structural edits instead of hiding content
      changes in walls of text
 
-## 2. Installation
+## 2. How to use this tool?
+
+### 2.1. As a command-line tool
+
+First, install it from PyPI:
 
 ```bash
-pip install .
+pip install markdown-heading-numbering
 ```
 
-For development:
-
-```bash
-pip install -e .[dev]
-```
-
-## 3. Usage
-
-### 3.1. As a command-line tool
+And then:
 
 ```bash
 markdown-heading-numbering \
@@ -73,7 +68,7 @@ Options:
 Any existing numbering is removed before the formatter applies the new
 sequence.
 
-### 3.2. As a pre-commit hook
+### 2.2. As a pre-commit hook
 
 This repository ships a `.pre-commit-hooks.yaml` that points to the CLI. Add
 the hook to your `.pre-commit-config.yaml`:
@@ -88,16 +83,16 @@ the hook to your `.pre-commit-config.yaml`:
 
 The hook shares the same options as the CLI and formats files in place.
 
-## 4. Compatibility with other formatters
+## 3. Compatibility with other formatters
 
-### 4.1. With [markdown-toc-creator](https://github.com/jsh9/markdown-toc-creator)
+### 3.1. With [markdown-toc-creator](https://github.com/jsh9/markdown-toc-creator)
 
 If you are also using
 [markdown-toc-creator](https://github.com/jsh9/markdown-toc-creator) as a
 pre-commit hook to for create tables of contents in your markdown files, put
 that hook **after** this one.
 
-### 4.2. With [mdformat](https://github.com/hukkin/mdformat)
+### 3.2. With [mdformat](https://github.com/hukkin/mdformat)
 
 This tool is fully compatible with
 [mdformat](https://github.com/hukkin/mdformat) as pre-commit hooks.
