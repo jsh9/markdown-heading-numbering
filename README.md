@@ -3,23 +3,23 @@
 CLI formatter and pre-commit hook that adds hierarchical numbering to Markdown
 headings.
 
+<!--TOC-->
+
 ______________________________________________________________________
 
-**Table of Contents:**
-
-<!--TOC-->
+**Table of Contents**
 
 - [1. Why add numbering to markdown headings?](#1-why-add-numbering-to-markdown-headings)
 - [2. How to use this tool?](#2-how-to-use-this-tool)
   - [2.1. As a command-line tool](#21-as-a-command-line-tool)
   - [2.2. As a pre-commit hook](#22-as-a-pre-commit-hook)
 - [3. Compatibility with other formatters](#3-compatibility-with-other-formatters)
-  - [3.1. With markdown-toc-creator](#31-with-markdown-toc-creator)
-  - [3.2. With mdformat](#32-with-mdformat)
-
-<!--TOC-->
+  - [3.1. With `markdown-toc-creator`](#31-with-markdown-toc-creator)
+  - [3.2. With `mdformat`](#32-with-mdformat)
 
 ______________________________________________________________________
+
+<!--TOC-->
 
 ## 1. Why add numbering to markdown headings?
 
@@ -88,14 +88,14 @@ The hook shares the same options as the CLI and formats files in place.
 
 ## 3. Compatibility with other formatters
 
-### 3.1. With [markdown-toc-creator](https://github.com/jsh9/markdown-toc-creator)
+### 3.1. With [`markdown-toc-creator`](https://github.com/jsh9/markdown-toc-creator)
 
-If you are also using
-[markdown-toc-creator](https://github.com/jsh9/markdown-toc-creator) as a
+If you are also using my other markdown formatter
+[`markdown-toc-creator`](https://github.com/jsh9/markdown-toc-creator) as a
 pre-commit hook to for create tables of contents in your markdown files, put
 that hook **after** this one.
 
-### 3.2. With [mdformat](https://github.com/hukkin/mdformat)
+### 3.2. With [`mdformat`](https://github.com/hukkin/mdformat)
 
 This tool is fully compatible with
-[mdformat](https://github.com/hukkin/mdformat) as pre-commit hooks.
+[`mdformat`](https://github.com/hukkin/mdformat) as pre-commit hooks.
