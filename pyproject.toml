@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "markdown-heading-numbering"
-version = "0.1.0"
+version = "0.1.1"
 description = "CLI and pre-commit hook to add hierarchical numbering to Markdown headings."
 readme = "README.md"
 authors = [{ name = "jsh9" }]
