@@ -19,12 +19,12 @@ repos:
         exclude: ^tests/test_data/|^tests/helpers\.py$
       - id: check-merge-conflict
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.21.0
+    rev: v3.21.2
     hooks:
       - id: pyupgrade
         args: [--py310-plus]
   - repo: https://github.com/jsh9/muff-pre-commit
-    rev: 0.13.2
+    rev: 0.14.11
     hooks:
       - id: muff-format
         args: [--config, muff.toml]
@@ -34,7 +34,7 @@ repos:
       - id: blank-line-after-blocks
       - id: blank-line-after-blocks-jupyter
   - repo: https://github.com/lyz-code/yamlfix
-    rev: 1.18.0
+    rev: 1.19.1
     hooks:
       - id: yamlfix
   - repo: https://github.com/hukkin/mdformat
@@ -55,7 +55,7 @@ repos:
           - --no-sort-keys
           - --no-eof-newline
   - repo: https://github.com/jsh9/format-docstring
-    rev: 0.2.2
+    rev: 0.2.7
     hooks:
       - id: format-docstring
         name: Format docstrings in .py files
@@ -71,7 +71,7 @@ repos:
         exclude: ^CHANGELOG\.md$|^tests/test_data
         additional_dependencies: [click>=8.0]
   - repo: https://github.com/jsh9/markdown-toc-creator
-    rev: 0.1.0
+    rev: 0.1.3
     hooks:
       - id: markdown-toc-creator
         exclude: ^tests/test_data/|^AGENTS\.md$|^CHANGELOG\.md$
