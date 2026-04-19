@@ -18,6 +18,7 @@ def _read_case(folder: Path, filename: str) -> str:
     ('case_name', 'options'),
     [
         ('default.md', {}),
+        ('no_dot_after_heading.md', {}),
         ('start_level_3.md', {'start_from_level': 3, 'initial_numbering': 2}),
         ('end_level_4.md', {'end_at_level': 4}),
         (
