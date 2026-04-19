@@ -21,6 +21,7 @@ def _copy_case(tmp_path: Path, case_name: str) -> Path:
     ('case_name', 'cli_args'),
     [
         ('default.md', []),
+        ('no_dot_after_heading.md', []),
         (
             'start_level_3.md',
             ['--start-from-level', '3', '--initial-numbering', '2'],
