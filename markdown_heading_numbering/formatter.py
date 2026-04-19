@@ -13,7 +13,7 @@ from pathlib import Path
 
 _HEADING_PATTERN = re.compile(r'^(#{1,6})\s+(.*)$')
 _NUMBER_PREFIX_PATTERN = re.compile(
-    r'^(?P<number>\d+(?:\.\d+)*)\.\s+(?P<title>.*)$'
+    r'^(?P<number>\d+(?:\.\d+)*)\.?\s+(?P<title>.*)$'
 )
 
 
